@@ -4,4 +4,6 @@
 *.log
 *.fdb_latexmk
 *.gz
-main.pdf
+*.bbl
+*.blg
+*.pdf
