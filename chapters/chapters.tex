@@ -1,45 +1,42 @@
-\textual
-
 \chapter{Introdução}
 
 \chapter{Relações de Girard}
-\par
-As relações de \textit{Girard} vem de uma corelação entre os coeficientes e as raízes de um polinômio de $n$-ésimo grau.
-No caso em particular dos polinômios simétricos, essa relação estará ligada ao \textit{Teorema Fundamental dos Polinômios Simétricos}.
-\par
-\ding{172} Guardemos o seguinte polinômio do $2^\circ$ grau, para $a \neq 0$:
-\[ ax^2 + bx + c \]
-\par
-\ding{173} Agora iremos desenvolver a seguinte expressão:
+
+As relações de Girard estabelecem uma conexão direta entre os coeficientes de um polinômio e suas raízes. No caso de polinômios simétricos, essa relação está intrinsecamente ligada ao \textit{Teorema Fundamental dos Polinômios} Simétricos.
+
+Considere o polinômio do $2^\circ$ grau, com $a \neq 0$:
+\begin{equation}
+  P(x) = ax^2 + bx + c
+\end{equation}
+
+Sendo $x_1$ e $x_2$ as raízes desse polinômio, podemos escrevê-lo na forma fatorada:
 \begin{align*}
-    a(x - x_1)(x - x_2) &= a(x^2 - xx_1 - xx_2 + x_1x_2) \\
-    &= a(x^2 - (x_1 + x_2)x + x_1x_2) \\
-	&= ax^2 - a(x_1 + x_2)x +  ax_1x_2 \\
-	&= ax^2 - a\sigma_1x +  a\sigma_2
+  a(x - x_1)(x - x_2) &= a(x^2 - x_1x - x_2x + x_1x_2) \\
+  &= a(x^2 - (x_1 + x_2)x + x_1x_2) \\
+  &= ax^2 - a(x_1 + x_2)x + ax_1x_2
 \end{align*}
-\par
-Se observarmos \ding{172} e \ding{173} é possível notar uma relação entre os coeficientes b, c e os polinômios fundamentais de duas variáveis.
-Portanto:
+
+Definindo os polinômios elementares simétricos $\sigma_1 = x_1 + x_2$ e $\sigma_2 = x_1x_2$, observamos por comparação com a forma original que:
 \begin{align*}
-    b = -a\sigma_1 &\iff -\frac{b}{a} = \sigma_1\\
-	c = a\sigma_2 &\iff \frac{c}{a} =\sigma_2
+  b = -a\sigma_1 &\implies \sigma_1 = -\frac{b}{a} \\
+  c = a\sigma_2 &\implies \sigma_2 = \frac{c}{a}
 \end{align*}
-\par
-Para os de $n$-ésimo grau, com $a_k \neq 0$, sendo $1 \leq k \leq n$, teremos:
+
+Generalizando para um polinômio de grau $n$ ($n \geq 1$) com $a_n \neq 0$:
 \begin{align*}
-	p(x) &= a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\
-	&= a_n(x - x_1)(x - x_2)\cdots(x - x_n)\\
-	& \qquad \qquad \qquad \vdots \\
-	&= a_n \left( x^n - \sigma_1 x^{n-1} + \sigma_2 x^{n-2} - \cdots + (-1)^n \sigma_n \right)
+  P(x) &= a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 \\
+  &= a_n(x - x_1)(x - x_2)\dots(x - x_n)
 \end{align*}
-\par daí
-\begin{align*}
-	\sigma_k = (-1)^k \cdot \frac{a_{n-k}}{a_n}
-\end{align*}
-\par
-A beleza dessas proporções pode ser apreciada na soma de potências, que será desenvolvido durante o próximo capítulo. 
+
+Ao expandir o produto das raízes, obtemos a relação geral em termos dos polinômios elementares simétricos $\sigma_k$:
+\begin{equation}
+  P(x) = a_n \sum_{k=0}^{n} (-1)^k \sigma_k x^{n-k}
+\end{equation}
+onde $\sigma_0 = 1$. Portanto, para cada $k \in \{1, \dots, n\}$, temos:
+\begin{equation}
+  \sigma_k = (-1)^k \frac{a_{n-k}}{a_n}
+\end{equation}
+
+A elegância dessas relações torna-se ainda mais evidente na análise de somas de potências de raízes, tópico que exploraremos no capítulo seguinte.
+
 \chapter{Soma de potências}
-
-\chapter{Aplicações}
-
-\postextual
