@@ -1,0 +1,45 @@
+\textual
+
+\chapter{Introdução}
+
+\chapter{Relações de Girard}
+\par
+As relações de Girard vem de uma corelação entre os coeficientes e as raízes de um polinômio de n-grau.
+No caso em particular dos polinômios simétricos, essa relação estará ligada ao Teorema Fundamental dos Polinômios Simétricos.
+\par
+\ding{172} Guardemos o seguinte polinômio do $2^\circ$ grau, para $a \neq 0$:
+\[ ax^2 + bx + c \]
+\par
+\ding{173} Agora iremos desenvolver a seguinte expressão:
+\begin{align*}
+    a(x - x_1)(x - x_2) &= a(x^2 - xx_1 - xx_2 + x_1x_2) \\
+    &= a(x^2 - (x_1 + x_2)x + x_1x_2) \\
+	&= ax^2 - a(x_1 + x_2)x +  ax_1x_2 \\
+	&= ax^2 - a\sigma_1x +  a\sigma_2
+\end{align*}
+\par
+Se observarmos \ding{172} e \ding{173} é possível notar uma relação entre os coeficientes b, c e os polinômios fundamentais de duas variáveis.
+Portanto:
+\begin{align*}
+    b = -a\sigma_1 &\iff -\frac{b}{a} = \sigma_1\\
+	c = a\sigma_2 &\iff \frac{c}{a} =\sigma_2
+\end{align*}
+\par
+Para os de n-grau, com $a_k \neq 0$, sendo $1 \leq k \leq n$, teremos:
+\begin{align*}
+	p(x) &= a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0 \\
+	&= a_n(x - x_1)(x - x_2)\cdots(x - x_n)\\
+	& \qquad \qquad \qquad \vdots \\
+	&= a_n \left( x^n - \sigma_1 x^{n-1} + \sigma_2 x^{n-2} - \cdots + (-1)^n \sigma_n \right)
+\end{align*}
+\par daí
+\begin{align*}
+	\sigma_k = (-1)^k \cdot \frac{a_{n-k}}{a_n}
+\end{align*}
+\par
+A beleza dessas proporções pode ser apreciada na soma de potências, que será desenvolvido durante o próximo capítulo. 
+\chapter{Soma de potências}
+
+\chapter{Aplicações}
+
+\postextual

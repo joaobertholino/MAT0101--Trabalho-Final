@@ -1,0 +1,77 @@
+\documentclass[12pt,openright,oneside,a4paper,english,french,spanish,brazil]{abntex2}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[alf]{abntex2cite}
+\usepackage{amsmath, amsthm, amsfonts, amssymb, mathtools}
+\usepackage{pifont}
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{proposicao}[teorema]{Proposição}
+
+\theoremstyle{definition}
+\newtheorem{exemplo}{Exemplo}[chapter]
+\newtheorem{definicao}{Definição}[chapter]
+
+\theoremstyle{remark}
+\newtheorem*{demonstracao}{Demonstração}
+\newtheorem*{solucao}{Solução}
+
+\titulo{Polinômios Simétricos e Aplicações}
+\autor{Grupo SymetriX}
+\local{São Paulo, SP}
+\data{2026}
+
+\instituicao{
+  Universidade de São Paulo -- USP
+  \par
+  Instituto de Matemática, Estatística e Ciência da Computação -- IME
+  \par
+  Bacharelado em Matemática
+  \par
+  Disciplina: MAT0101 - Tópicos de Matemática Elementar
+}
+
+\tipotrabalho{Trabalho Final}
+
+\preambulo{Trabalho apresentado à disciplina MAT0101 - Tópicos de Matemática Elementar, do curso de Bacharelado em Matemática do Instituto de Matemática, Estatística e Ciência da Computação da USP.}
+
+\definecolor{blue}{RGB}{41,5,195}
+
+\makeatletter
+\hypersetup{
+  pdftitle      = {\@title},
+  pdfauthor     = {\@author},
+  pdfsubject    = {\imprimirpreambulo},
+  pdfcreator    = {LaTeX with abnTeX2},
+  colorlinks    = true,
+  linkcolor     = blue,
+  citecolor     = blue,
+  filecolor     = magenta,
+  urlcolor      = blue,
+  bookmarksdepth= 4
+}
+\makeatother
+\frenchspacing
+
+\begin{document}
+\include{front/frontmatter}
+
+\imprimirfolhaderosto
+
+\include{sumary/sumary}
+
+\include{chapters/chapters}
+
+\include{members/members}
+
+\include{bibliography/bib}
+
+\end{document}
