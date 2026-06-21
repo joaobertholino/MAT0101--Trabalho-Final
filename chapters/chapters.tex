@@ -39,7 +39,41 @@ Para os de $n$-ésimo grau, com $a_k \neq 0$, sendo $1 \leq k \leq n$, teremos:
 \par
 A beleza dessas proporções pode ser apreciada na soma de potências, que será desenvolvido durante o próximo capítulo. 
 \chapter{Soma de potências}
+Em 1707, o matemático e físico Sir Isaac Newton generalizou em sua obra "*Arithmetica Universalis*" as somas de potências, hoje conhecidas como Somas de Newton na forma:
 
+$$S_{k} = r_{1}^{k} + r_{2}^{k} + r_{3}^{k} + \dots + r_{n}^{k}$$
+
+Essa soma pode ser reescrita com polinômios simétricos elementares, essa relação é um teorema de Identidade de Newton.
+
+Seja $k \in \mathbb{N}$, $k \ge n$, então:
+
+Seja $S(x) = x^{n} - a_{1}x^{n-1} + a_{2}x^{n-2} - \dots + (-1)^{n}a_{n}$
+
+Onde $r_{1}, r_{2}, \dots, r_{n}$ são raízes de $S(x)=0$, então:
+
+**Demonstração:**
+
+Usando as relações de Girard, podemos escrever a equação para uma raiz:
+
+$$P(x_{1}) = x_{1}^{n} - a_{1}x_{1}^{n-1} + a_{2}x_{1}^{n-2} - a_{3}x_{1}^{n-3} + \dots + (-1)^{n}a_{n} = 0$$
+
+Multiplico por $x_{1}^{k-n}$ obtendo:
+
+$$x_{1}^{k} - a_{1}x_{1}^{k-1} + a_{2}x_{1}^{k-2} - a_{3}x_{1}^{k-3} + \dots + (-1)^{n}a_{n}x_{1}^{k-n} = 0$$
+
+Para cada uma das raízes monto um sistema de equações:
+
+$$x_{1}^{k} - a_{1}x_{1}^{k-1} + a_{2}x_{1}^{k-2} - a_{3}x_{1}^{k-3} + \dots + (-1)^{n}a_{n}x_{1}^{k-n} = 0$$
+
+$$x_{2}^{k} - a_{1}x_{2}^{k-1} + a_{2}x_{2}^{k-2} - a_{3}x_{2}^{k-3} + \dots + (-1)^{n}a_{n}x_{2}^{k-n} = 0$$
+
+$$\vdots$$
+
+$$x_{n}^{k} - a_{1}x_{n}^{k-1} + a_{2}x_{n}^{k-2} - a_{3}x_{n}^{k-3} + \dots + (-1)^{n}a_{n}x_{n}^{k-n} = 0$$
+
+Somando as equações e escrevendo em somas de Newton:
+
+$$S_{k} - a_{1}S_{k-1} + a_{2}S_{k-2} - a_{3}S_{k-3} + \dots + (-1)^{n}a_{n}S_{k-n} = 0 \quad \blacksquare$$
 \chapter{Aplicações}
 
 \postextual
