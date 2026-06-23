@@ -47,7 +47,7 @@ Sendo $x_1$ e $x_2$ as raízes desse polinômio, podemos escrevê-lo na forma fa
 	                    & = ax^2 - a(x_1 + x_2)x + ax_1x_2
 \end{align*}
 
-Definindo os polinômios elementares simétricos $\sigma_1 = x_1 + x_2$ e $\sigma_2 = x_1x_2$, observamos por comparação com a forma original que:
+Definindo os polinômios simétricos elementares $\sigma_1 = x_1 + x_2$ e $\sigma_2 = x_1x_2$, observamos por comparação com a forma original que:
 \begin{align*}
 	b = -a\sigma_1 & \implies \sigma_1 = -\frac{b}{a} \\
 	c = a\sigma_2  & \implies \sigma_2 = \frac{c}{a}
@@ -59,7 +59,7 @@ Generalizando para um polinômio de grau $n$ ($n \geq 1$) com $a_n \neq 0$:
 	     & = a_n(x - x_1)(x - x_2)\dots(x - x_n)
 \end{align*}
 
-Ao expandir o produto das raízes, obtemos a relação geral em termos dos polinômios elementares simétricos $\sigma_k$:
+Ao expandir o produto das raízes, obtemos a relação geral em termos dos polinômios simétricos elementares $\sigma_k$:
 \begin{equation}
 	P(x) = a_n \sum_{k=0}^{n} (-1)^k \sigma_k x^{n-k}
 \end{equation}
@@ -74,10 +74,10 @@ A elegância dessas relações torna-se ainda mais evidente na análise de somas
 
 Em 1707, o matemático e físico Sir Isaac Newton generalizou em sua obra \textit{Arithmetica Universalis} as somas de potências, hoje conhecidas como Somas de Newton na forma:
 \begin{equation}
-	S_{k} = r_{1}^{k} + r_{2}^{k} + r_{3}^{k} + \dots + r_{n}^{k}
+	S_{k} = x_{1}^{k} + x_{2}^{k} + x_{3}^{k} + \dots + x_{n}^{k}
 \end{equation}
 
-Onde $r_{1}, r_{2}, \dots, r_{n}$ são raízes de $S(x)=0$. Essa soma pode ser reescrita com polinômios simétricos elementares. Tal relação é um teorema de Identidade de Newton.
+Onde $x_{1}, x_{2}, \dots, x_{n}$ são raízes de $S(x)=0$. Essa soma pode ser reescrita com polinômios simétricos elementares. Tal relação é um teorema de Identidade de Newton.
 
 Seja $k \in \mathbb{N}$, $k \ge n$, então $S(x) = x^{n} - \sigma_{1}x^{n-1} + \sigma_{2}x^{n-2} - \dots + (-1)^{n}\sigma_{n}$
 
@@ -99,11 +99,19 @@ Para cada uma das raízes montamos um sistema de equações:
     \vdots \\
     x_{n}^{k} - \sigma_{1}x_{n}^{k-1} + \sigma_{2}x_{n}^{k-2} - \sigma_{3}x_{n}^{k-3} + \dots + (-1)^{n}\sigma_{n}x_{n}^{k-n} = 0
 \end{gather*}
+
 Somando as equações e escrevendo em somas de Newton:
 
 \begin{equation}
 	S_{k} - \sigma_{1}S_{k-1} + \sigma_{2}S_{k-2} - \sigma_{3}S_{k-3} + \dots + (-1)^{n}\sigma_{n}S_{k-n} = 0
 \end{equation}
+
+Como consequência disso, podemos descobrir as somas das potências com base nos resultados das potências anteriores.
+
+\begin{equation}
+	S_k = \sigma_{1}S_{k-1} - \sigma_{2}S_{k-2} + \sigma_{3}S_{k-3} - \dots - (-1)^{n}\sigma_{n}S_{k-n}
+\end{equation}
+
 
 \chapter{Aplicações}
 
@@ -136,3 +144,7 @@ Portanto, as soluções do sistema são:
 \begin{align*}
 	S_{(x, y, z)} &= \{(1, 2, 3); (1, 3, 2); (2, 1, 3); (3, 1, 2); (2, 3, 1); (3, 2, 1)\}
 \end{align*}
+
+Dessa forma, transformamos um sistema de 3 variáveis em uma equação de 3° grau e investigamos suas raízes. Nota-se, também, que se L é a quantidade de soluções de um polinômio simétrico, então L = n!, basta notar que há n possibilidades para a primeira posição, n-1 para a segunda, e assim sucessivamente.
+
+Como visto no decorrer do texto as Relações de Girad e as Somas de Potências de Newton tem uma forte ligação tendo em vista que são dependentes das propriedades de simetria.
