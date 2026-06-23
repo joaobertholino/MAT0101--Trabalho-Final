@@ -73,8 +73,9 @@ A elegância dessas relações torna-se ainda mais evidente na análise de somas
 \chapter{Soma de potências de Newton}
 
 Em 1707, o matemático e físico Sir Isaac Newton generalizou em sua obra \textit{Arithmetica Universalis} as somas de potências, hoje conhecidas como Somas de Newton na forma:
-
-$$S_{k} = r_{1}^{k} + r_{2}^{k} + r_{3}^{k} + \dots + r_{n}^{k}$$
+\begin{equation}
+	S_{k} = r_{1}^{k} + r_{2}^{k} + r_{3}^{k} + \dots + r_{n}^{k}
+\end{equation}
 
 Onde $r_{1}, r_{2}, \dots, r_{n}$ são raízes de $S(x)=0$. Essa soma pode ser reescrita com polinômios simétricos elementares. Tal relação é um teorema de Identidade de Newton.
 
@@ -92,25 +93,46 @@ $$x_{1}^{k} - \sigma_{1}x_{1}^{k-1} + \sigma_{2}x_{1}^{k-2} - \sigma_{3}x_{1}^{k
 
 Para cada uma das raízes montamos um sistema de equações:
 
-$$x_{1}^{k} - \sigma_{1}x_{1}^{k-1} + \sigma_{2}x_{1}^{k-2} - \sigma_{3}x_{1}^{k-3} + \dots + (-1)^{n}\sigma_{n}x_{1}^{k-n} = 0$$
-
-$$x_{2}^{k} - \sigma_{1}x_{2}^{k-1} + \sigma_{2}x_{2}^{k-2} - \sigma_{3}x_{2}^{k-3} + \dots + (-1)^{n}\sigma_{n}x_{2}^{k-n} = 0$$
-
-$$\vdots$$
-
-$$x_{n}^{k} - \sigma_{1}x_{n}^{k-1} + \sigma_{2}x_{n}^{k-2} - \sigma_{3}x_{n}^{k-3} + \dots + (-1)^{n}\sigma_{n}x_{n}^{k-n} = 0$$
-
+\begin{gather*}
+    x_{1}^{k} - \sigma_{1}x_{1}^{k-1} + \sigma_{2}x_{1}^{k-2} - \sigma_{3}x_{1}^{k-3} + \dots + (-1)^{n}\sigma_{n}x_{1}^{k-n} = 0 \\
+    x_{2}^{k} - \sigma_{1}x_{2}^{k-1} + \sigma_{2}x_{2}^{k-2} - \sigma_{3}x_{2}^{k-3} + \dots + (-1)^{n}\sigma_{n}x_{2}^{k-n} = 0 \\
+    \vdots \\
+    x_{n}^{k} - \sigma_{1}x_{n}^{k-1} + \sigma_{2}x_{n}^{k-2} - \sigma_{3}x_{n}^{k-3} + \dots + (-1)^{n}\sigma_{n}x_{n}^{k-n} = 0
+\end{gather*}
 Somando as equações e escrevendo em somas de Newton:
 
-$$S_{k} - \sigma_{1}S_{k-1} + \sigma_{2}S_{k-2} - \sigma_{3}S_{k-3} + \dots + (-1)^{n}\sigma_{n}S_{k-n} = 0$$
+\begin{equation}
+	S_{k} - \sigma_{1}S_{k-1} + \sigma_{2}S_{k-2} - \sigma_{3}S_{k-3} + \dots + (-1)^{n}\sigma_{n}S_{k-n} = 0
+\end{equation}
 
 \chapter{Aplicações}
 
-Existem aplicações dos polinômios simétricos tanto na física quanto na criptografia, nesse texto exploraremos sua utilidade nas olimpiadas de conhecimento. A seguir temos um exeplo de quetão da OBM que podemos utilizar as propriedades desenvolvidas até aqui.
+Existem aplicações dos polinômios simétricos tanto na física quanto na criptografia, neste texto exploraremos sua utilidade nas olimpíadas de conhecimento. A seguir temos um exemplo de questão que podemos utilizar as propriedades desenvolvidas até aqui.
 
-(OBM 2010) Sejam $a$, $b$ e $c$ reais tais que $a \neq b$ e
-\[
-a^2(b + c) = b^2(c + a) = 2010.
-\]
+Resolva o sistema
+$$
+\begin{cases}
+	x + y + z = 6, \\
+	xy + xz + yz = 11, \\
+	xyz = 6.
+\end{cases}
+$$
 
-Calcule $c^2(a + b)$
+Se observarmos o sistema podemos utilizá-lo para escrever as relações de Girard para um polinômio do terceiro grau, tal que:
+
+\begin{gather*}
+    x^3 - \sigma_1x^2 + \sigma_2x - \sigma_3 = 0 \\
+    \text{Substituindo $\sigma$ pelos respectivos valores, temos: }\\
+    x^3 - 6x^2 + 11x - 6 = 0 \\
+    \text{Podemos reescrevê-lo da seguinte forma: }\\
+    x^3 - 5x^2 + 6x -x^2 + 5x - 6 = 0 \\
+    x(x^2 - 5x + 6) -x^2 + 5x - 6 = 0 \\
+    (x - 1) (x^2 - 5x + 6) = 0\\
+    \text{O que por fim nos dá o seguinte resultado: } \\
+    (x - 1) (x - 2) (x - 3) = 0
+\end{gather*}
+
+Portanto, as soluções do sistema são:
+\begin{align*}
+	S_{(x, y, z)} &= \{(1, 2, 3); (1, 3, 2); (2, 1, 3); (3, 1, 2); (2, 3, 1); (3, 2, 1)\}
+\end{align*}
